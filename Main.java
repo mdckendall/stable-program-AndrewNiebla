@@ -12,14 +12,14 @@ class Main {
 			char input = scanner.next().charAt(0);
 			scanner.nextLine();
 			if(input == 'y'){
-				Horse h;
+			
 				System.out.println("What is the name of the horse?");
 				String hn = scanner.nextLine();
 				System.out.println("What is the weight of the horse?");
 				double w = scanner.nextDouble();
 				System.out.println("Enter true if the horse is tame or false if it is not.");
 				boolean t = scanner.nextBoolean();
-				h = new Horse(hn, w, t);
+				Horse h = new Horse(hn, w, t);
 				s.arrayList.add(h);
 			}//testing goodest 4
 			else{
@@ -28,6 +28,13 @@ class Main {
 		}while(true);
 		//Display the info here
                 //You code here!
-	  }
+    int b = 1;
+    for(int i = 0; i < s.arrayList.size(); i ++){
+      
+      System.out.println( "Horse #" + b + " Name: " + s.arrayList.get(i).hn + " Weight: " + s.arrayList.get(i).w + " Tame: " + s.arrayList.get(i).t);
+      b++;
+    }
   }
 }
+  
+
